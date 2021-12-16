@@ -1,2 +1,1 @@
-# quantum_computer_simulator
-simulates quantum circuits and quantum algorithms
+# Quantum Computer Simulator in C++
