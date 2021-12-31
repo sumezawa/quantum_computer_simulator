@@ -11,6 +11,7 @@ class unitary_operator {
   public:
     unitary_operator(std::size_t n) : op(n, std::vector<scalar>(n, 0)), dimension(n); // constructor, n x n matrix
     void scalar_multiply(scalar s);
+    void vector_multiply(
   
     // print
     friend std::ostream& operator<<(std::ostream& os, unitary_operator& op);
