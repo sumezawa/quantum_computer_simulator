@@ -1,15 +1,15 @@
-#ifndef OPERATORS_H
-#define OPERATORS_H
+#ifndef UNITARY_OPERATOR_H
+#define UNITARY_OPERATOR_H
 
 #include <complex>
 #include <vector>
 
 typedef std::complex<double> scalar;
 
-class operators {
+class unitary_operator {
   public:
     unitary_operator(unsigned int dimension);
-    scalar_multiply(scalar a);
+    unitary_operator scalar_multiply(scalar a);
   
   private:
     std::vector<std::vector<scalar>> matrix;
