@@ -16,6 +16,8 @@ void unitary_operator::scalar_multiply(scalar s) {
 }
 
 /* VECTOR MULTIPLICATION OF AN OPERATOR */
+void unitary_operator::vector_multiply(unitary_operator op);
+
 
 /* PRINT OPERATOR */
 std::ostream &operator<<(std::ostream &os, unitary_operator op) {
