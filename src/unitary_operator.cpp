@@ -1,7 +1,8 @@
 #include "unitary.h"
 #include <algorithm> // std::transform
-#include <iostream> // std::ostream
+#include <iostream> // std::ostream, std::cout
 
+/* SCALAR MULTIPLICATION OF AN OPERATOR */
 void unitary_operator::scalar_multiply(scalar s) {
   for (std::vector<std::vector<scalar>>::iterator rowptr = op.begin(); rowptr != op.end(); ++rowptr) {
     std::transform(rowptr->begin(), rowptr->end(), rowptr->begin(), [s](int &c){ return c*s; });
@@ -14,18 +15,21 @@ void unitary_operator::scalar_multiply(scalar s) {
   return;
 }
 
+/* VECTOR MULTIPLICATION OF AN OPERATOR */
+
+/* PRINT OPERATOR */
 std::ostream &operator<<(std::ostream &os, unitary_operator op) {
-	for (std::vector<std::vector<scalar>>::iterator rowptr = op.begin(); rowptr != op.end(); ++rowptr) {
-		for (std::vector<scalar>::iterator colptr = rowptr->begin(); colptr != rowptr->end(); ++colptr) {
-			os << *colptr << "\t";
-		}
-		os << std::endl;
-	}
-	return os;
+  for (std::vector<std::vector<scalar>>::iterator rowptr = op.begin(); rowptr != op.end(); ++rowptr) {
+    for (std::vector<scalar>::iterator colptr = rowptr->begin(); colptr != rowptr->end(); ++colptr) {
+      os << *colptr << " ";
+    }
+    os << std::endl;
+  }
+  return os;
 }
 
 void unitary_operator::print_operator() {
-	std::cout << *this;
+  std::cout << *this;
 }
     
 
