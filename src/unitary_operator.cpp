@@ -1,4 +1,4 @@
-#include "unitary.h"
+#include "unitary_operator.h"
 #include <algorithm> // std::transform
 #include <iostream> // std::ostream, std::cout
 
@@ -16,7 +16,11 @@ void unitary_operator::scalar_multiply(scalar s) {
 }
 
 /* VECTOR MULTIPLICATION OF AN OPERATOR */
-void unitary_operator::vector_multiply(unitary_operator op);
+void unitary_operator::vector_multiply(unitary_operator& op) {
+  std::vector<std::vector<scalar>> product(n, std::vector<scalar>(n, 0));
+  // take column 
+  return;
+}
 
 
 /* PRINT OPERATOR */
