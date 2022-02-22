@@ -36,5 +36,4 @@ std::ostream &operator<<(std::ostream &os, matrix op) {
 
 void unitary::print_operator() {
   std::cout << op;
-  return;
 }
